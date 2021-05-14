@@ -19,6 +19,7 @@ if has ("win32")
         set guioptions-=m "remove menu bar
         set guioptions-=T "remove toolbar
     endif
+    set lines=35 columns=80
 
 elseif has ("unix")
     set rtp+=~/.vim/bundle/Vundle.vim
@@ -112,8 +113,10 @@ set wildignore+=*.swp
 set history=10000
 " Give me lots of Undos
 set undolevels=10000
+" Let my cursor go one past end of line
+set virtualedit=onemore
 " Let my cursor go everywhere
-set virtualedit=all
+"set virtualedit=all
 " Search as I type
 set incsearch
 " Use the / instead of \
