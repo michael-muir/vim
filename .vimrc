@@ -13,6 +13,7 @@ if has ("win32")
     set shell=cmd
 
     " Windows like clipboard
+    " ( Ctrl-Q replaces Ctrl-V to enter visual block mode )
     vm <c-x> "+x
     vm <c-c> "+y
     cno <c-v> <c-r>+
