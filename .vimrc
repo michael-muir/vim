@@ -12,6 +12,17 @@ if has ("win32")
     set clipboard=unnamed
     set shell=cmd
 
+    " Windows like clipboard
+    vm <c-x> "+x
+    vm <c-c> "+y
+    cno <c-v> <c-r>+
+    exe 'ino <script> <C-V>' paste#paste_cmd['i']
+
+    " delete, yank, select a document
+    nn dad ggVGd
+    nn yad %y
+    nn vad ggVG
+
     " Gvim
     if has("gui_running")
         set guifont=Lucida_Console:h10
